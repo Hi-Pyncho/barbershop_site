@@ -1,0 +1,678 @@
+/* * {
+    outline: 1px solid rgb(238, 143, 143);
+} */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+}
+
+body.main-page {
+    background-image: url(img/background.jpg);
+    color: white;
+}
+
+li {list-style: none;}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+
+h1, h2, h3 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border: none;  
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+.button:hover {
+    background-color: #663d15;
+}
+
+.main-header {
+    background-color:#000000;
+    min-height: 72px;
+}
+
+.header-container {
+    min-height: 72px;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-navigation {
+    display: flex;
+    min-height: 72px;
+}
+
+.header-logo {
+    margin-right: 20px;
+}
+
+.site-navigation,
+.user-navigation {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation li {
+    display: flex;
+    align-items: center;  
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-navigation li:hover {
+    background-color: #242424;
+}
+
+.nav-current {
+    border-bottom: 4px solid white;
+    padding-top: 4px;
+}
+
+.site-navigation {margin-right: auto;}
+.user-navigation li {
+    display: flex;
+    align-items: center;
+}
+
+.user-navigation li {
+    display: flex;
+    align-items: center; 
+    margin-left: -35px;
+}
+
+.user-navigation a {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 35px;
+}
+
+.user-navigation a::before {
+    content: '';
+    position: absolute;
+    right: 60px;
+    top: 4px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(svg/login.svg);
+    opacity: 0.7;
+}
+
+.user-navigation li:hover a::before {opacity: 1;}
+
+
+
+
+
+
+
+/* ___________MainPage________________ */
+
+
+
+
+
+
+.index-logo {
+    display: block;
+    margin: 50px auto;
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.features-list h3,
+.features-list p {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.features-list p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.feature-item {
+    width: 270px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.features-list h3 {margin-bottom: 60px;}
+
+.feature-item h3::after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 47%;
+    background-color: white;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+}
+
+.index-columns {
+    display: flex;
+    color: black;
+    background-color: white;
+    margin-bottom: 40px;
+    background-image: url(img/half-transparent-line.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 30px 40px;
+}
+
+.news, 
+.gallery,
+.contacts,
+.appointment {width: 470px;}
+
+.index-columns h2,
+.index-columns ul,
+.index-columns p {
+    margin: 0;
+    padding: 0;
+}
+
+.index-columns .button {
+    padding: 10px 30px;
+}
+
+.news .button {
+    margin-top: 25px;
+    display: block;
+    width: 90px;
+}
+
+.gallery-wrapper {
+    width: 286px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.news time {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.gallery h2,
+.news h2,
+.contacts h2,
+.appointment h2
+{margin-bottom: 20px;}
+
+.gallery img {margin-bottom: 20px;}
+
+.gallery-button-next {float: right;}
+
+.gallery .button {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.contacts p {margin-bottom: 20px;}
+
+.form-wrapper {
+    width: 290px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.appointment form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+}
+
+.appointment-item label {
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.appointment-item input {
+    box-sizing: border-box;
+    width: 140px;
+    padding: 10px;
+    border: solid 3px #000101;
+}
+
+.appointment-form .button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.appointment-item input:focus {
+    border-color: #663d15;
+}
+
+
+
+
+
+
+
+/* ____________CardsPage______________ */
+
+
+
+
+
+.main-menu,
+.cards-content,
+.footer-wrapper,
+.container {
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cards-content {
+    margin-top: 55px;
+}
+
+.breadcrumps {margin-bottom: 55px;}
+
+.breadcrumps ul {padding: 0;}
+
+.breadcrumps a {color: black;}
+
+.breadcrumps ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+.breadcrumps li:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transform: rotate(45deg);
+    top: 0px;
+    left: -12px;
+}
+
+.breadcrumps li:nth-child(1):before {
+    display: none;
+}
+
+.breadcrumps-current a {
+    color: #aba9a7;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-cards {width: 460px;}
+
+.product-cards img {
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.thumbnails-cards {
+    padding: 0;
+    width: 465px;  
+}
+
+.thumbnails-cards li {
+    display: inline;
+    margin-right: 17px;
+}
+
+.product-info {
+    padding-top: 20px;
+    width: 400px;
+}
+
+.product-info_availible {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.vendor-code {color: #aeaeae;}
+
+.product-info_price {
+   display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 67px;
+    background-color: #e5e5e5;
+}
+
+.price {  
+    padding: 13px 30px;
+    margin-right: -3px;
+}
+
+.product-info_product-composition li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.product-info_product-composition ul {padding-left: 25px;}
+
+.product-info_product-composition li:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transform: rotate(45deg);
+    left: -21px;
+    top: 5px;
+}
+
+.product-info_product-composition h2 {margin-bottom: 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _____________CommonFooter______________ */
+
+.main-footer {
+    min-height: 150px;
+    background-color: #232323;
+    color: white;
+    padding-top: 1px;
+    margin-top: 50px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.footer-contacts a {
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 7px;
+}
+
+.footer-contacts a:hover{
+    text-decoration: none;
+}
+
+.footer-contacts p {
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+.footer-social {
+    width: 142px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-links li { 
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+}
+
+
+.social-links li:nth-child(1) {
+    background: url(svg/vk.svg) no-repeat 50% 50%;}
+.social-links li:nth-child(2) {
+    background: url(svg/facebook.svg) no-repeat 50% 50%;}
+.social-links li:nth-child(3) {
+    background: url(svg/instagram.svg) no-repeat 50% 50%;}
+
+.social-links li:hover {
+    background-color: black;
+}
+
+
+
+
+/* __________ModalWindows___________ */
+
+.modal {
+    position: fixed;
+    background-color: #f8f8f0;
+    color: black;
+    box-shadow: 0 30px  50px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+/* Затемняющий оверлэй */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.modal-login {
+    display: none;
+
+    top: 120px;
+    left: 50%;
+
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-login h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-description {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login-form .login-help {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.login-form .login-help a {color: black;}
+
+.login-form p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px 15px;
+    padding-right: 40px;
+    font: inherit;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #f9f6f3;
+    border: 2px solid black;
+}
+
+.login-form input:focus {
+    border-color: #663d15; 
+}
+
+.login-icon-user {
+    background-image: url(svg/user.svg);
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-icon-password {
+    background-image: url(svg/lock.svg);
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+    color: #663d15;
+}
+
+.login-checkbox input[type='checkbox'] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+
+.login-checkbox input[type='checkbox']:focus + .checkbox-indicator {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.login-checkbox input[type='checkbox']:checked + .checkbox-indicator::before,
+.login-checkbox input[type='checkbox']:checked + .checkbox-indicator::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.login-checkbox input[type='checkbox']:checked + .checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.login-checkbox input[type='checkbox']:checked + .checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+.login-form .button {
+    width: 100%;
+}
+
+.modal-map {
+    display: none;
+    top: 50%;
+    left: 50%;
+
+    width: 780px;
+    height: 560px;
+    margin-top: -280px;
+    margin-left: -390px;
+    border: 7px solid white;
+}
+
+.modal-map p {
+    margin: 0;
+}
