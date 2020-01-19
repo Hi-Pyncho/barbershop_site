@@ -99,9 +99,16 @@ input[type='radio'].visually-hidden {
     background-color: #242424;
 }
 
-.nav-current {
-    border-bottom: 4px solid white;
-    padding-top: 4px;
+.nav-current {position: relative;}
+
+.nav-current::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    left: 10px;
+    height: 5px;
+    background-color: white;
 }
 
 .site-navigation {margin-right: auto;}
