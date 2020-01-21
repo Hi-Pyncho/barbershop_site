@@ -18,7 +18,8 @@ body.main-page {
 }
 
 body.price-page,
-body.cards-page {
+body.cards-page,
+body.shop-page {
     background-color: white;
     background-image: url(img/background-pattern.jpg);
     color: black;
@@ -336,7 +337,9 @@ input[type='radio'].visually-hidden {
 
 .breadcrumps ul {padding: 0;}
 
-.breadcrumps a {color: black;}
+.breadcrumps a {
+    color: black; 
+    vertical-align: middle;}
 
 .breadcrumps ul li {
     display: inline;
@@ -435,10 +438,6 @@ input[type='radio'].visually-hidden {
 
 /* ________________priceList-page_______________ */
 
-/* .container {
-    color: black;
-    padding: 40px 50px;
-} */
 
 .inner-content {
   margin-bottom: 75px;
@@ -587,11 +586,163 @@ input[type='radio'].visually-hidden {
 
 
 
+/* __________________ShopPage______________ */
+
+.flex-container {
+    display: flex;
+}
+
+.company-checkbox,
+.goods-radio {
+    display: block;
+    margin-bottom: 17px;
+}
+
+.filter-type-goods h2 {margin-top: 54px;}
+
+.filters {
+    width: 190px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filter-company,
+.filter-type-goods {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.filters legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.goods {margin-left: 50px;}
+
+.goods-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.goods-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    min-height: 286px;
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+
+
+.goods-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.goods-item a {
+    display: flex;
+    flex-direction: column;
+}
+
+.goods-item h3 {
+    order: 2;
+    text-transform: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.goods-item .goods-title {text-transform: uppercase;}
+
+.goods-item span {
+    display: block;
+    padding: 0;
+    line-height: 22px;
+    margin-left: 16px;
+}
+
+.goods-item .goods-image {
+    width: 220px;
+    height: 165px;
+    margin: 0;
+}
+
+.goods-price {
+    margin-top: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.goods-price b {
+    min-width: 109px;
+    text-align: center;
+    background-color: #e5e5e5;
+    display: block;
+    line-height: 50px;
+}
+
+
+.pagination-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 0;
+    margin: 0;
+  
+    list-style: none;
+  }
+  
+  .pagination-item {
+    margin-right: 5px;
+  }
+  
+  .pagination-item:last-child {
+    margin-right: 0;
+  }
+  
+  .pagination-item a {
+    display: block;
+    padding: 10px 19px;
+    
+    color: #ffffff;
+  
+    background-color: #000000;
+  }
+  
+  .pagination-item a:hover,
+  .pagination-item a:focus,
+  .pagination-item a:active {
+    background-color: #663d15;
+  }
+  
+  .pagination-item-current a {
+    color: #000000;
+  
+    background-color: #ffffff;
+  }
+  
+  .pagination-item-current a:hover,
+  .pagination-item-current a:focus,
+  .pagination-item-current a:active {
+    color: #000000;
+  
+    background-color: #ffffff;
+  }
+  
 
 
 
 
 
+
+
+  
 /* _____________CommonFooter______________ */
 
 .main-footer {
@@ -837,4 +988,99 @@ input[type='radio'].visually-hidden {
 
 .modal-map p {
     margin: 0;
+}
+
+
+
+
+/* Checkbox buttons styles */
+.filter-company label {
+    line-height: 25px;
+}
+
+.filter-type-goods label {
+    line-height: 22px;
+}
+
+.company-checkbox {
+    position: relative;
+    padding-left: 40px;
+}
+
+.company-checkbox:hover,
+.company-checkbox:focus {
+    color: #663d15;
+}
+
+.company-checkbox input[type='checkbox'] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: solid 2px #000101;
+}
+
+.company-checkbox input[type='checkbox']:focus + .checkbox-indicator {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.company-checkbox input[type='checkbox']:checked + .checkbox-indicator::before,
+.company-checkbox input[type='checkbox']:checked + .checkbox-indicator::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 16px;
+    height: 3px;
+    background-color: #000000;
+}
+
+.company-checkbox input[type='checkbox'] + .checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.company-checkbox input[type='checkbox'] + .checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+
+
+
+/* Radio buttons styles */
+.goods-radio {
+    position: relative;
+    padding-left: 40px;
+}
+
+.goods-radio:hover,
+.goods-radio:hover {
+    color: #663d15;
+}
+
+.goods-radio input[type='radio'] + .radio-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: solid 2px #000101;
+    border-radius: 50%;
+}
+
+.goods-radio input[type='radio']:focus + .radio-indicator {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.goods-radio input[type='radio']:checked + .radio-indicator::after {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin-left: 5px;
 }
